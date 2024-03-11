@@ -1,0 +1,211 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@font-face {                  
+font-family: 'AnalogueOS';
+src: url(https://humantooth.neocities.org/fonts/AnalogueOS-Regular.woff) format('woff');
+font-weight: normal;
+font-style: normal;
+} 
+
+/*<uniquifier>: Use a unique and descriptive class name
+  <weight>: Use a value from 100 to 900 */
+
+.noto-sans mono--<sans> {
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Noto Sans Mono", Courier, monospace;
+    font-size: 14px;
+    margin: 0;
+    background-color: #0f130b;
+    background-image: url('../images/bg_hikingShoes.png');
+    background-position: top;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+}
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* header text */
+.header {
+    padding: 20px;
+    text-align: center;
+    font-family: 'AnalogueOS';
+    color: #f8f4ff;
+    font-size: 40px;
+    text-shadow: 2px 2px #272727;
+}
+
+/* navigation bar */
+.nav {
+    background-color: rgba(39,39,39, 0.80);
+    margin: 0;
+    padding: 10px;
+    border-radius: 16px 16px 0 0;
+    border-color: #272727;
+    border-style: solid;
+    border-width: 3px 3px 0 3px;
+    text-align: right;
+    box-shadow: 3px  4px #272727;
+}
+.nav a {
+    color: #f8f4ff;
+    padding: 10px;
+    font-family: 'AnalogueOS';
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: #f8f4ff;
+    color: #272727;
+}
+
+/* main box that holds left and right colums */
+.main {  
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #272727;
+    margin-bottom: 20px;
+    box-shadow: 3px  4px #272727;
+}
+
+/* left sidebar area */
+.left-side {
+    flex: 30%;
+    background-color: rgba(39,39,39, 0.80);
+    padding: 5px 15px;
+    color: #f8f4ff;
+}
+.left-side a, .left-side a:visited {
+    color: #f8f4ff;
+    font-family: 'AnalogueOS';
+    text-decoration: none;
+    padding: 0 2px;
+}
+.left-side a:hover {
+    color: #f8f4ff;
+    text-decoration: underline;
+}
+.left-side a:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+/* right content area */
+.right-side {
+    flex: 70%;
+    background-color: RGBA(177, 175, 199, .7);
+    padding: 5px 20px;
+    color: #272727;
+}
+.right-side a, .right-side a:visited {
+    color: #272727;
+    text-decoration: none;
+    border-bottom: 1px dotted #272727;
+    padding: 0 2px;
+}
+.right-side a:hover {
+    color: #272727;
+    background-color: #f8f4ff;
+    padding: 2px;
+}
+.right-side a:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+/* this limits the width of images so the layout doesn't stretch */
+.left-side img, .right-side img {
+    max-width: 100%;
+}
+
+.feed-item-desc {
+  font-size: 12px;
+}
+
+.feed-item-title {
+  font-size: 12px;
+}
+
+/* headers */
+h1 {
+    font-size: 20px;
+    font-family: 'AnalogueOS';
+    font-weight: normal;
+    padding: 4px 10px;
+    border: 3px solid #272727;
+    border-radius: 16px;
+    background-color: RGB(177, 175, 199);
+    box-shadow: 3px  3px #f8f4ff;
+    margin: 15px 0;
+}
+h2 {
+    font-size: 20px;
+    font-family: 'AnalogueOS';
+    font-weight: normal;
+    color: #272727;
+    padding: 4px 10px;
+    border: 3px solid #272727;
+    border-radius: 16px;
+    background-color: RGB(177, 175, 199);
+    box-shadow: 3px  3px #f8f4ff;
+    margin: 15px 0;
+}
+h3 {
+    font-size: 18px;
+    font-family: 'AnalogueOS';
+    font-weight: normal;
+    color: #272727;
+    padding: 4px 10px;
+    border: 3px solid #f8f4ff;
+    border-radius: 16px;
+    background-color: #f8f4ff;
+    box-shadow: 3px  3px RGB(177, 175, 199);
+    margin: 15px 0;
+}
+h4 {
+    font-size: 12px;
+    font-family: "Noto Sans Mono", Courier, monospace;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px dotted;
+}
+
+
+/* mark (highlighted text) style */
+mark {
+    background-color: #f5b7af;
+}
+
+/* underline style */
+u{
+    text-decoration: none;
+    box-shadow: inset 0 -5px 0 0 #f5b7af;
+}
+
+@media screen and (max-width: 700px) {
+    .main, .nav {   
+        flex-direction: column;
+    }
+    .right-side {
+        order: 1;
+    }
+    .left-side {
+        order: 2;
+    }
+}
